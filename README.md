@@ -1,32 +1,43 @@
-# Windows Port Manager
+# Port Manager
 
-🛡️ A simple Windows GUI tool to manage firewall port rules (TCP/UDP).
+**Port Manager**, Windows Güvenlik Duvarı (Windows Firewall) üzerinde kolayca port açma, silme ve kontrol işlemleri yapmanı sağlayan bir grafik arayüz uygulamasıdır.
 
-## 🔧 Features
-- Add new firewall rules for **TCP**, **UDP**, or **both**
-- Delete existing firewall rules
-- Check if a specific port is **open** or **closed**
-- Easy-to-use interface built with **Tkinter**
-- Windows **administrator rights** required
+---
 
-## 📦 Download
+## 🧩 Özellikler
 
-➡️ [Download the latest `.exe` release](https://github.com/penu18/windows-port/releases/latest)
+- Belirli bir portu açma ve silme (TCP/UDP/Both)
+- Mevcut portları kontrol etme
+- Kullanımı kolay ve sade arayüz
 
-## 🖥️ Requirements
-- Windows 10/11
-- Python 3.10+ (if running from source)
-- Administrator privileges
+---
 
-## 🚀 How to Use
+## 📸 Ekran Görüntüleri
 
-### Option 1: Run Executable  
-1. [Download `port.exe`](https://github.com/penu18/windows-port/releases/latest)
-2. Run as **Administrator**
-3. Use the GUI to add/delete/check port rules
+**Uygulama Arayüzü:**
 
-### Option 2: Run from Source
-```bash
-git clone https://github.com/penu18/windows-port.git
-cd windows-port
-python port.py
+![Port Manager UI](https://github.com/penu18/windows-port/blob/main/screenshots/port_o9VfwW1D9F.png)
+
+**Yönetici İzni (UAC):**
+
+![UAC](https://github.com/penu18/windows-port/blob/main/screenshots/consent_K0nMxS7OIq.png)
+
+---
+
+## 💾 Kurulum
+
+.exe dosyasını indirdikten sonra çalıştırın:  
+👉 [Son Sürüm (.exe)](https://github.com/penu18/windows-port/releases)
+
+---
+
+## ⚠️ Notlar
+
+- Program Windows Güvenlik Duvarı kurallarını değiştirmek için **yönetici yetkisi** ister.
+- Yayıncı bilinmediği için ilk çalıştırmada UAC onayı gereklidir.
+
+---
+
+## 🛠️ Geliştirici
+
+**GitHub:** [penu18](https://github.com/penu18)
