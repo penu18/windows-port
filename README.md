@@ -65,6 +65,12 @@ You can:
 
 ---
 
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
 ## Development (Run from source)
 
 To run or modify the project:
@@ -73,7 +79,3 @@ To run or modify the project:
 git clone https://github.com/penu18/windows-port.git
 cd windows-port
 python main.py
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
