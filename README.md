@@ -34,8 +34,11 @@ After downloading the `port.exe` file, run it with administrator privileges.
 
 ## ⚠️ Notes
 
-- The application requires **administrator rights** to manage firewall rules.
-- Since it's unsigned, Windows will show a UAC warning.
+- This application **requires administrator privileges** to modify Windows Firewall rules.
+- When you run the program, **Windows will prompt you with a UAC (User Account Control) dialog** asking for permission.
+- This is normal and expected — the app needs elevated access to create or delete firewall rules.
+- Since the executable is **not digitally signed**, the prompt may show **"Unknown Publisher"**.  
+  If you downloaded the `.exe` from this project's official [Releases](https://github.com/penu18/windows-port/releases) page, it is safe to proceed.
 
 ---
 
