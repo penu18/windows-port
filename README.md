@@ -9,47 +9,65 @@ A simple Python GUI application for managing Windows Firewall ports (open/close 
 - Check and list open firewall ports
 - Simple graphical interface built with Tkinter
 
-## Screenshots
+---
 
-### Application Interface
+## Security Warnings (First Run)
 
-![Port Manager](https://github.com/penu18/windows-port/blob/main/screenshots/port_o9VfwW1D9F.png)
+Since this application modifies system firewall settings, **Windows will prompt security warnings**. Here's how to safely proceed:
+
+### 1. Windows Defender SmartScreen
+
+If you downloaded the `.exe` version (e.g., `port.exe`) and run it for the first time, SmartScreen may block it.
+
+#### Initial warning:
+
+![SmartScreen Initial](https://raw.githubusercontent.com/penu18/windows-port/refs/heads/main/screenshots/smartscreen_warning_initial.png)
+
+#### Expand and proceed:
+
+Click on **"More info"**, then **"Run anyway"**.
+
+![SmartScreen Expanded](https://raw.githubusercontent.com/penu18/windows-port/refs/heads/main/screenshots/smartscreen_warning_expanded.png)
+
+> 🛡 This is a standard behavior for unsigned applications. You can safely proceed if you trust the source (this GitHub repository).
 
 ---
 
-### User Account Control (UAC)
+### 2. User Account Control (UAC)
 
-When launching the executable (`port.exe`), Windows will prompt for administrator privileges. This is required to allow firewall modifications.
+After bypassing SmartScreen, Windows will prompt with UAC to confirm admin access:
 
-![UAC Prompt](https://github.com/penu18/windows-port/blob/main/screenshots/consent_K0nMxS7OIq.png)
+![UAC Prompt](https://raw.githubusercontent.com/penu18/windows-port/refs/heads/main/screenshots/uac_prompt_unknown_publisher.png)
 
-This is a **normal and expected behavior**. Since the app modifies Windows Firewall rules, it must run with elevated permissions.
+> 🔐 This is **required** for modifying firewall rules. If you deny, the application won't function properly.
 
 ---
 
-### Windows Defender SmartScreen
+## Application Interface
 
-Because this app is not signed with a verified digital certificate, Windows SmartScreen may display a warning like the following:
+Once allowed, the Port Manager application launches:
 
-![SmartScreen](https://github.com/penu18/windows-port/blob/main/screenshots/db6abe92-14f8-4040-a320-cb4e3be8e656.png)
+![Port Manager UI](https://raw.githubusercontent.com/penu18/windows-port/refs/heads/main/screenshots/port_manager_main_ui.png)
 
-Click `More info`, then `Run anyway` to proceed:
-
-![SmartScreen Run](https://github.com/penu18/windows-port/blob/main/screenshots/65b2ae00-a7fc-46ae-a7c6-4d294d224aa6.png)
-
-This message appears because the app is from an **unknown publisher**, which is expected for unsigned personal projects.
+You can:
+- Enter a port number
+- Choose TCP, UDP, or Both
+- Add/Delete rules
+- Check currently open ports
 
 ---
 
 ## Requirements
 
-- Python 3.x (for development version)
-- Admin privileges (UAC prompt)
-- Windows 10/11
+- Windows 10 or 11
+- Python 3.x (for development use)
+- Administrator privileges (required to modify firewall rules)
 
-## Development
+---
 
-To run or build the app yourself:
+## Development (Run from source)
+
+To run or modify the project:
 
 ```bash
 git clone https://github.com/penu18/windows-port.git
