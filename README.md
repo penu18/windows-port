@@ -1,47 +1,57 @@
-# Port Manager
+# windows-port
 
-**Port Manager** is a simple GUI tool for managing Windows Firewall ports. It allows you to easily open, delete, and check the status of ports using a graphical interface.
+A simple Python GUI application for managing Windows Firewall ports (open/close for TCP, UDP, or both) using the `netsh` command.
 
----
+## Features
 
-## 🔧 Features
-
-- Add new port rules (TCP / UDP / Both)
+- Add new firewall rules for TCP, UDP, or both protocols
 - Delete existing rules
-- Check if specific ports are open
-- Simple and clean user interface
+- Check and list open firewall ports
+- Simple graphical interface built with Tkinter
+
+## Screenshots
+
+### Application Interface
+
+![Port Manager](https://github.com/penu18/windows-port/blob/main/screenshots/port_o9VfwW1D9F.png)
 
 ---
 
-## 📸 Screenshots
+### User Account Control (UAC)
 
-**Application UI:**
-
-![Port Manager UI](https://github.com/penu18/windows-port/blob/main/screenshots/port_o9VfwW1D9F.png)
-
-**UAC (User Account Control) Prompt:**
+When launching the executable (`port.exe`), Windows will prompt for administrator privileges. This is required to allow firewall modifications.
 
 ![UAC Prompt](https://github.com/penu18/windows-port/blob/main/screenshots/consent_K0nMxS7OIq.png)
 
----
-
-## 🚀 Download
-
-You can download the latest release from the [Releases Page](https://github.com/penu18/windows-port/releases).  
-After downloading the `port.exe` file, run it with administrator privileges.
+This is a **normal and expected behavior**. Since the app modifies Windows Firewall rules, it must run with elevated permissions.
 
 ---
 
-## ⚠️ Notes
+### Windows Defender SmartScreen
 
-- This application **requires administrator privileges** to modify Windows Firewall rules.
-- When you run the program, **Windows will prompt you with a UAC (User Account Control) dialog** asking for permission.
-- This is normal and expected — the app needs elevated access to create or delete firewall rules.
-- Since the executable is **not digitally signed**, the prompt may show **"Unknown Publisher"**.  
-  If you downloaded the `.exe` from this project's official [Releases](https://github.com/penu18/windows-port/releases) page, it is safe to proceed.
+Because this app is not signed with a verified digital certificate, Windows SmartScreen may display a warning like the following:
+
+![SmartScreen](https://github.com/penu18/windows-port/blob/main/screenshots/db6abe92-14f8-4040-a320-cb4e3be8e656.png)
+
+Click `More info`, then `Run anyway` to proceed:
+
+![SmartScreen Run](https://github.com/penu18/windows-port/blob/main/screenshots/65b2ae00-a7fc-46ae-a7c6-4d294d224aa6.png)
+
+This message appears because the app is from an **unknown publisher**, which is expected for unsigned personal projects.
 
 ---
 
-## 👨‍💻 Author
+## Requirements
 
-**GitHub:** [penu18](https://github.com/penu18)
+- Python 3.x (for development version)
+- Admin privileges (UAC prompt)
+- Windows 10/11
+
+## Development
+
+To run or build the app yourself:
+
+```bash
+git clone https://github.com/penu18/windows-port.git
+cd windows-port
+python main.py
